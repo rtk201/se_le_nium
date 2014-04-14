@@ -7,8 +7,9 @@ public class NavigateToUrl {
 	public static void main(String[] args){
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
-		java.util.List<WebElement> inputs =  driver.findElements(By.tagName("input")) ;
-		System.out.println(inputs.size());
+		WebElement aboutLink = driver.findElement(By.linkText("About"));
+		aboutLink.click();
+		
 	}
 
 }
